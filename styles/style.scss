@@ -1,0 +1,51 @@
+$penFont: rgb(1, 25, 73);
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-size: 10px;
+    a {
+        text-decoration: none;
+        color: $penFont;
+    }
+}
+
+#wrapper {
+    width: 80%;
+    margin: auto;
+    max-width: 148em;
+    color: $penFont;
+    position: relative;
+}
+
+nav {
+    width: 100%;
+    padding: 1.5em 0em;
+    background-color: rgba(118, 182, 255, .2);
+    position: sticky;
+    top: 0em;
+    ul {
+        list-style-type: none;
+        text-align: center;
+        li {
+            display: inline;
+            font-size: 2.5em;
+            text-transform: uppercase;
+            padding: .5em .5em;
+            a {
+                padding: 0em .25em;
+                border-left: .05em solid gray;
+            }
+        }
+        li:hover {
+            background-color: rgba(118, 182, 255, .4);
+            border-radius: .3em;
+        }
+    }
+}
+
+#content {
+    background-color: rgb(240, 154, 154);
+}
