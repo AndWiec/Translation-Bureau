@@ -1,18 +1,34 @@
+@import "./flexbox";
 $penFont: rgb(1, 25, 73);
+$borderRadius: .5em;
 * {
     margin: 0px;
     padding: 0px;
 }
 
+
+/*
 body {
-    font-size: 10px;
-    a {
-        text-decoration: none;
-        color: $penFont;
-    }
+    background-image: url('../images/translate.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}*/
+
+a {
+    text-decoration: none;
+    color: $penFont;
+}
+
+img {
+    width: 80%;
+    padding: 1em 2em;
 }
 
 #wrapper {
+    font-size: 10px;
+    //background-color: rgba(114, 207, 106, 0.473);
     width: 80%;
     margin: auto;
     max-width: 148em;
@@ -23,29 +39,76 @@ body {
 nav {
     width: 100%;
     padding: 1.5em 0em;
-    background-color: rgba(118, 182, 255, .2);
+    background-color: rgba(118, 182, 255, .8);
     position: sticky;
     top: 0em;
+    z-index: 1;
+    &:hover {
+        background-color: rgb(118, 182, 255);
+    }
+    div {
+        line-height: 150%;
+    }
+    h2 {
+        padding-left: 1.5em;
+    }
     ul {
         list-style-type: none;
         text-align: center;
+        padding-top: .8em;
+        padding-left: 5em;
         li {
             display: inline;
-            font-size: 2.5em;
+            font-size: 1.7em;
             text-transform: uppercase;
-            padding: .5em .5em;
+            padding: .5em;
+            vertical-align: middle;
+            &:hover {
+                background-color: rgba(5, 58, 119, 0.4);
+                border-radius: $borderRadius;
+            }
             a {
                 padding: 0em .25em;
                 border-left: .05em solid gray;
+                letter-spacing: .15em;
             }
-        }
-        li:hover {
-            background-color: rgba(118, 182, 255, .4);
-            border-radius: .3em;
         }
     }
 }
 
 #content {
-    background-color: rgb(240, 154, 154);
+    padding-top: 1em;
+    width: 90%;
+    div {
+        position: relative;
+        h2 {
+            position: absolute;
+            right: 15%;
+            bottom: 20%;
+            font-size: 2.5em;
+            text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.3), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
+            background-color: rgba(245, 245, 245, 0.75);
+            padding: .1em .15em;
+            border-radius: $borderRadius;
+        }
+        p {
+            padding: 1em;
+        }
+    }
+    .--align-left {
+        background-color: whitesmoke;
+    }
+    .--align-right {
+        background-color: rgb(156, 156, 156);
+        position: relative;
+        left: 11%;
+    }
+    .--align-right,
+    .--align-left {
+        margin-bottom: .5em;
+        border-radius: $borderRadius;
+    }
+    p {
+        font-size: 1.5em;
+    }
 }
