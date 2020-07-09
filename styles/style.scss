@@ -1,20 +1,20 @@
 @import "./flexbox";
-$penFont: rgb(1, 25, 73);
+$penFont: rgb(1, 13, 39);
 $borderRadius: .5em;
 * {
     margin: 0px;
     padding: 0px;
 }
 
-
-/*
 body {
-    background-image: url('../images/translate.jpeg');
+    font-family: 'Rokkitt', serif;
+    font-weight: 600;
+    /*background-image: url('../images/translate.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    background-position: center;
-}*/
+    background-position: center;*/
+}
 
 a {
     text-decoration: none;
@@ -39,12 +39,14 @@ img {
 nav {
     width: 100%;
     padding: 1.5em 0em;
-    background-color: rgba(118, 182, 255, .8);
+    background-color: rgba(86, 136, 192, 0.8);
     position: sticky;
     top: 0em;
     z-index: 1;
+    border-bottom-left-radius: $borderRadius;
+    border-bottom-right-radius: $borderRadius;
     &:hover {
-        background-color: rgb(118, 182, 255);
+        background-color: rgb(102, 159, 224);
     }
     div {
         line-height: 150%;
@@ -111,4 +113,14 @@ nav {
     p {
         font-size: 1.5em;
     }
+}
+
+footer {
+    width: 100%;
+    border-top-left-radius: $borderRadius;
+    border-top-right-radius: $borderRadius;
+    background-color: rgb(0, 36, 0);
+    color: rgb(192, 192, 192);
+    text-align: center;
+    padding: 1.5em;
 }
