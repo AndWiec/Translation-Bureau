@@ -97,7 +97,23 @@
   max-width: 100%;
 }
 
-@media only screen and (min-width: 980px) {
+@media only screen and (min-width: 1000px) {
+  #wrapper {
+    width: 80%;
+  }
+  #wrapper #nav__menu {
+    display: block;
+  }
+  #wrapper #nav__menu-button {
+    display: none;
+  }
+  #wrapper #content {
+    width: 90%;
+  }
+  #wrapper #content .--align-right {
+    position: relative;
+    left: 11%;
+  }
   .col-md-1 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 8.33333333%;
@@ -199,13 +215,13 @@ a {
 }
 
 img {
-  width: 80%;
+  width: 90%;
   padding: 1em 2em;
 }
 
 #wrapper {
   font-size: 10px;
-  width: 80%;
+  width: 100%;
   margin: auto;
   max-width: 148em;
   color: #010d27;
@@ -214,7 +230,7 @@ img {
 
 nav {
   width: 100%;
-  padding: 1.5em 0em;
+  padding: .5em 0em;
   background-color: rgba(86, 136, 192, 0.8);
   position: -webkit-sticky;
   position: sticky;
@@ -222,6 +238,20 @@ nav {
   z-index: 1;
   border-bottom-left-radius: 0.5em;
   border-bottom-right-radius: 0.5em;
+}
+
+nav #nav__menu {
+  display: none;
+}
+
+nav #nav__menu-button {
+  display: flexbox;
+  text-align: right;
+  font-size: 3em;
+}
+
+nav #nav__menu-button i {
+  padding-right: 1.5em;
 }
 
 nav:hover {
@@ -238,7 +268,7 @@ nav h2 {
 
 nav ul {
   list-style-type: none;
-  text-align: center;
+  text-align: right;
   padding-top: .8em;
   padding-left: 5em;
 }
@@ -264,7 +294,7 @@ nav ul li a {
 
 #content {
   padding-top: 1em;
-  width: 90%;
+  width: 100%;
 }
 
 #content div {
@@ -273,8 +303,8 @@ nav ul li a {
 
 #content div h2 {
   position: absolute;
-  right: 15%;
-  bottom: 20%;
+  right: 8%;
+  bottom: 15%;
   font-size: 2.5em;
   text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.3), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
   background-color: rgba(245, 245, 245, 0.75);
@@ -283,17 +313,16 @@ nav ul li a {
 }
 
 #content div p {
-  padding: 1em;
+  padding: 3em 2em 0em 1em;
+  text-align: justify;
 }
 
 #content .--align-left {
-  background-color: whitesmoke;
+  background-color: rgba(237, 237, 237, 0.25);
 }
 
 #content .--align-right {
-  background-color: #9c9c9c;
-  position: relative;
-  left: 11%;
+  background-color: rgba(247, 247, 247, 0.25);
 }
 
 #content .--align-right,
@@ -313,6 +342,7 @@ footer {
   background-color: #002400;
   color: silver;
   text-align: center;
+  margin-top: .5em;
   padding: 1.5em;
 }
 /*# sourceMappingURL=style.css.map */
