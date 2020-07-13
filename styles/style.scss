@@ -8,7 +8,7 @@ $borderRadius: .5em;
 body {
     font-family: 'Rokkitt', serif;
     font-weight: 600;
-    color: $penFont;    
+    color: $penFont;
     font-size: 10px;
     overflow-x: hidden;
 }
@@ -27,6 +27,7 @@ img {
     margin: auto;
     max-width: 148em;
 }
+
 nav {
     padding: .5em 0em;
     background-color: rgba(86, 136, 192, 0.8);
@@ -80,13 +81,14 @@ nav {
 }
 
 #content {
+    padding-top: 4em;
     width: 100%;
     div {
         position: relative;
         h2 {
             position: absolute;
-            left: 28%;
-            bottom: 15%;
+            top: 75%;
+            right: 5%;
             font-size: 2.5em;
             text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.3), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
             background-color: rgba(245, 245, 245, 0.75);
@@ -94,7 +96,7 @@ nav {
             border-radius: $borderRadius;
         }
         p {
-            padding: 3em 2em 0em 1em;
+            padding: 1em 2em 1em 1em;
             text-align: justify;
         }
     }
@@ -116,12 +118,18 @@ nav {
 
 footer {
     width: 100%;
-    border-top-left-radius: $borderRadius;
-    border-top-right-radius: $borderRadius;
-    background-color: rgb(0, 36, 0);
-    color: rgb(192, 192, 192);
-    text-align: center;
     margin-top: .5em;
-    padding: 1.5em;
+    hr {
+        width: 95%;
+        margin: auto;
+        border-radius: 90%;
+        border-top: .1em solid $penFont;
+    }
+    iframe {
+        width: 100%;
+        height: 45em;
+        border: none;
+    }
 }
+
 @import "./flexbox";
