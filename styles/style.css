@@ -13,7 +13,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #010d27;
+  color: #e7fcf3;
 }
 
 img {
@@ -23,12 +23,12 @@ img {
 
 #wrapper {
   margin: auto;
-  max-width: 148em;
+  max-width: 192em;
 }
 
 nav {
   padding: .5em 0em;
-  background-color: rgba(86, 136, 192, 0.8);
+  background-color: #21703f;
   border-bottom-left-radius: 0.5em;
   border-bottom-right-radius: 0.5em;
   position: fixed;
@@ -51,12 +51,9 @@ nav #nav__menu-button i {
   padding-right: .5em;
 }
 
-nav:hover {
-  background-color: #669fe0;
-}
-
 nav div {
   line-height: 150%;
+  color: #e7fcf3;
 }
 
 nav h2 {
@@ -66,26 +63,38 @@ nav h2 {
 nav ul {
   list-style-type: none;
   text-align: right;
-  padding-top: .8em;
-  padding-left: 5em;
+  padding: .8em .2em .2em 5em;
 }
 
 nav ul li {
   display: block;
   font-size: 1.7em;
   text-transform: uppercase;
-  padding: .5em;
-}
-
-nav ul li:hover {
-  background-color: rgba(5, 58, 119, 0.4);
-  border-radius: 0.5em;
+  padding-top: .5em;
+  padding-left: .5em;
+  position: relative;
 }
 
 nav ul li a {
   padding: 0em .25em;
-  border-left: .05em solid gray;
   letter-spacing: .15em;
+}
+
+nav ul li::before {
+  content: '';
+  display: flexbox;
+  height: .2em;
+  background-color: #e7fcf3;
+  position: absolute;
+  top: 0;
+  width: 0%;
+  padding-left: 0em;
+  -webkit-transition: all ease-in-out 250ms;
+  transition: all ease-in-out 250ms;
+}
+
+nav ul li:hover::before {
+  width: 92%;
 }
 
 #content {
@@ -249,15 +258,14 @@ footer iframe {
 }
 
 @media only screen and (min-width: 980px) {
-  #wrapper {
-    width: 80%;
-  }
   #wrapper .toggle {
     display: block;
   }
   #wrapper nav {
-    width: 100%;
-    position: static;
+    position: relative;
+  }
+  #wrapper nav ul {
+    padding-right: 10em;
   }
   #wrapper nav ul li {
     display: inline;
@@ -275,6 +283,10 @@ footer iframe {
   #wrapper #content .--align-right {
     position: relative;
     left: 11%;
+  }
+  #wrapper footer {
+    width: 98%;
+    margin: auto;
   }
   .col-md-1 {
     -webkit-box-flex: 0;
