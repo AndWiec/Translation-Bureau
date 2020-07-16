@@ -29,15 +29,14 @@ img {
     max-width: 192em;
 }
 
-nav {
+nav#top__navigation {
+    position: fixed;
+    top: 0;
+    z-index: 1;
     padding: .5em 0em;
     background-color: rgb(33, 112, 63);
     border-bottom-left-radius: $borderRadius;
     border-bottom-right-radius: $borderRadius;
-    position: fixed;
-    display: block;
-    z-index: 1;
-    width: 100%;
     .toggle {
         display: none;
     }

@@ -99,17 +99,17 @@
     
     @media only screen and (min-width: 980px) {
         #wrapper {
-            .toggle {
-                display: block;
-            }
-            nav {
+            nav#top__navigation {
                 position: relative;
+                .toggle {
+                    display: inline-block;
+                }
                 ul {
                     padding-right: 10em;
+                    li {
+                        display: inline;
+                    }
                 }
-            }
-            nav ul li {
-                display: inline;
             }
             #nav__menu-button {
                 display: none;

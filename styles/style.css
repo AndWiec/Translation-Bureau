@@ -26,47 +26,46 @@ img {
   max-width: 192em;
 }
 
-nav {
+nav#top__navigation {
+  position: fixed;
+  top: 0;
+  z-index: 1;
   padding: .5em 0em;
   background-color: #21703f;
   border-bottom-left-radius: 0.5em;
   border-bottom-right-radius: 0.5em;
-  position: fixed;
-  display: block;
-  z-index: 1;
-  width: 100%;
 }
 
-nav .toggle {
+nav#top__navigation .toggle {
   display: none;
 }
 
-nav #nav__menu-button {
+nav#top__navigation #nav__menu-button {
   display: flexbox;
   text-align: right;
   font-size: 2.3em;
 }
 
-nav #nav__menu-button i {
+nav#top__navigation #nav__menu-button i {
   padding-right: .5em;
 }
 
-nav div {
+nav#top__navigation div {
   line-height: 150%;
   color: #e7fcf3;
 }
 
-nav h2 {
+nav#top__navigation h2 {
   padding-left: 1.5em;
 }
 
-nav ul {
+nav#top__navigation ul {
   list-style-type: none;
   text-align: right;
   padding: .8em .2em .2em 5em;
 }
 
-nav ul li {
+nav#top__navigation ul li {
   display: block;
   font-size: 1.7em;
   text-transform: uppercase;
@@ -75,12 +74,12 @@ nav ul li {
   position: relative;
 }
 
-nav ul li a {
+nav#top__navigation ul li a {
   padding: 0em .25em;
   letter-spacing: .15em;
 }
 
-nav ul li::before {
+nav#top__navigation ul li::before {
   content: '';
   display: flexbox;
   height: .2em;
@@ -93,7 +92,7 @@ nav ul li::before {
   transition: all ease-in-out 250ms;
 }
 
-nav ul li:hover::before {
+nav#top__navigation ul li:hover::before {
   width: 92%;
 }
 
@@ -258,16 +257,16 @@ footer iframe {
 }
 
 @media only screen and (min-width: 980px) {
-  #wrapper .toggle {
-    display: block;
-  }
-  #wrapper nav {
+  #wrapper nav#top__navigation {
     position: relative;
   }
-  #wrapper nav ul {
+  #wrapper nav#top__navigation .toggle {
+    display: inline-block;
+  }
+  #wrapper nav#top__navigation ul {
     padding-right: 10em;
   }
-  #wrapper nav ul li {
+  #wrapper nav#top__navigation ul li {
     display: inline;
   }
   #wrapper #nav__menu-button {
