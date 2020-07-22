@@ -115,14 +115,20 @@
                 display: none;
             }
             #content {
+                padding-top: 1em;
                 width: 90%;
-                h2 {
-                    top: 75%;
-                    right: 5%;
+                img {
+                    max-width: 85%
                 }
                 .--align-right {
                     position: relative;
                     left: 11%;
+                }
+                div {
+                    flex-direction: unset;
+                    h2 {
+                        text-align: unset;
+                    }
                 }
             }
             footer {

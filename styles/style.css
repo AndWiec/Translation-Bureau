@@ -3,6 +3,10 @@
   padding: 0px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Rokkitt', serif;
   font-weight: 600;
@@ -17,8 +21,8 @@ a {
 }
 
 img {
-  max-width: 85%;
-  padding: 1em 2em;
+  max-width: 100%;
+  margin: auto;
 }
 
 #wrapper {
@@ -97,27 +101,29 @@ nav#top__navigation ul li:hover::before {
 }
 
 #content {
-  padding-top: 4em;
+  padding-top: 6em;
   width: 100%;
 }
 
 #content div {
-  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #content div h2 {
-  position: absolute;
-  top: 75%;
-  right: 5%;
+  text-align: center;
   font-size: 2.5em;
   text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.3), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
-  background-color: rgba(245, 245, 245, 0.75);
-  padding: .1em .15em;
   border-radius: 0.5em;
 }
 
 #content div p {
-  padding: 1em 2em 1em 1em;
+  padding: 1em 2em;
   text-align: justify;
 }
 
@@ -273,15 +279,24 @@ footer iframe {
     display: none;
   }
   #wrapper #content {
+    padding-top: 1em;
     width: 90%;
   }
-  #wrapper #content h2 {
-    top: 75%;
-    right: 5%;
+  #wrapper #content img {
+    max-width: 85%;
   }
   #wrapper #content .--align-right {
     position: relative;
     left: 11%;
+  }
+  #wrapper #content div {
+    -webkit-box-orient: unset;
+    -webkit-box-direction: unset;
+        -ms-flex-direction: unset;
+            flex-direction: unset;
+  }
+  #wrapper #content div h2 {
+    text-align: unset;
   }
   #wrapper footer {
     width: 98%;
