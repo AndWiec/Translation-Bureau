@@ -163,6 +163,28 @@ footer iframe {
   border: none;
 }
 
+footer #footer__info {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  text-align: center;
+}
+
+footer #footer__info h4 {
+  font-size: 2.5em;
+}
+
+footer #footer__info p {
+  padding: .5em 0;
+  font-size: 1.8em;
+}
+
+footer #footer__info #footer__contact span p {
+  font-size: 1.4em;
+  width: 20em;
+  margin: auto;
+}
+
 .row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -263,9 +285,6 @@ footer iframe {
 }
 
 @media only screen and (min-width: 980px) {
-  #wrapper nav#top__navigation {
-    position: relative;
-  }
   #wrapper nav#top__navigation .toggle {
     display: inline-block;
   }
@@ -279,7 +298,6 @@ footer iframe {
     display: none;
   }
   #wrapper #content {
-    padding-top: 1em;
     width: 90%;
   }
   #wrapper #content img {
