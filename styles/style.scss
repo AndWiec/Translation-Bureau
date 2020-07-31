@@ -29,6 +29,7 @@ img {
 #wrapper {
     margin: auto;
     max-width: 192em;
+    background-color: rgba(247, 247, 247, .25);
 }
 
 nav#top__navigation {
@@ -107,12 +108,6 @@ nav#top__navigation {
             text-align: justify;
         }
     }
-    .--align-left {
-        background-color: rgba(237, 237, 237, .25);
-    }
-    .--align-right {
-        background-color: rgba(247, 247, 247, .25);
-    }
     .--align-right,
     .--align-left {
         margin-bottom: .5em;
@@ -147,11 +142,14 @@ footer {
             padding: .5em 0;
             font-size: 1.8em;
         }
-        #footer__contact {
+        .footer__contact {
             span p {
                 font-size: 1.4em;
                 width: 20em;
                 margin: auto;
+                a {
+                    color: $penFont;
+                }
             }
         }
     }
