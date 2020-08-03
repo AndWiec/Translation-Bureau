@@ -138,6 +138,15 @@
                 width: 98%;
                 margin: auto;
             }
+        
+        @keyframes example {
+            0% {
+                right: 0px;
+            }
+            100% {
+                right: 0px;
+            }
+        }
         }
         .col-md-1 {
             -webkit-box-flex: 0;

@@ -33,12 +33,15 @@ img {
 
 nav#top__navigation {
   position: fixed;
-  top: 0;
+  top: -.5em;
   z-index: 1;
-  padding: .5em 0em;
-  background-color: #21703f;
   border-bottom-left-radius: 0.5em;
   border-bottom-right-radius: 0.5em;
+  background-color: transparent;
+}
+
+nav#top__navigation .top__nav--bg-green {
+  background-color: #21703f;
 }
 
 nav#top__navigation .toggle {
@@ -53,6 +56,11 @@ nav#top__navigation #nav__menu-button {
 
 nav#top__navigation #nav__menu-button i {
   padding-right: .5em;
+}
+
+nav#top__navigation #nav__menu {
+  -webkit-animation: example 500ms ease-in forwards;
+          animation: example 500ms ease-in forwards;
 }
 
 nav#top__navigation div {
@@ -180,6 +188,30 @@ footer #footer__info .footer__contact span p {
 
 footer #footer__info .footer__contact span p a {
   color: #010d27;
+}
+
+@-webkit-keyframes example {
+  0% {
+    right: -100%;
+    border-radius: 0 0 .5em 0.5em;
+  }
+  100% {
+    right: 0;
+    background-color: #21703f;
+    border-radius: 0 0 1.5em 1.5em;
+  }
+}
+
+@keyframes example {
+  0% {
+    right: -100%;
+    border-radius: 0 0 .5em 0.5em;
+  }
+  100% {
+    right: 0;
+    background-color: #21703f;
+    border-radius: 0 0 1.5em 1.5em;
+  }
 }
 
 .row {
@@ -323,6 +355,22 @@ footer #footer__info .footer__contact span p a {
   #wrapper footer {
     width: 98%;
     margin: auto;
+  }
+  @-webkit-keyframes example {
+    0% {
+      right: 0px;
+    }
+    100% {
+      right: 0px;
+    }
+  }
+  @keyframes example {
+    0% {
+      right: 0px;
+    }
+    100% {
+      right: 0px;
+    }
   }
   .col-md-1 {
     -webkit-box-flex: 0;

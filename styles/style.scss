@@ -34,12 +34,14 @@ img {
 
 nav#top__navigation {
     position: fixed;
-    top: 0;
+    top: -.5em;
     z-index: 1;
-    padding: .5em 0em;
-    background-color: rgb(33, 112, 63);
     border-bottom-left-radius: $borderRadius;
     border-bottom-right-radius: $borderRadius;
+    background-color: transparent;
+    .top__nav--bg-green {
+        background-color: rgb(33, 112, 63);
+    }
     .toggle {
         display: none;
     }
@@ -50,6 +52,9 @@ nav#top__navigation {
         i {
             padding-right: .5em;
         }
+    }
+    #nav__menu {
+        animation: example 500ms ease-in forwards;
     }
     div {
         line-height: 150%;
@@ -155,4 +160,15 @@ footer {
     }
 }
 
+@keyframes example {
+    0% {
+        right: -100%;
+        border-radius: 0 0 .5em 0.5em;
+    }
+    100% {
+        right: 0;
+        background-color: rgb(33, 112, 63);
+        border-radius: 0 0 1.5em 1.5em;
+    }
+}
 @import "./flexbox";
