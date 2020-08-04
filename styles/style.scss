@@ -34,6 +34,7 @@ img {
 
 nav#top__navigation {
     position: fixed;
+    max-width: 192em;
     top: -.5em;
     z-index: 1;
     border-bottom-left-radius: $borderRadius;
