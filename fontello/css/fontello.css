@@ -24,7 +24,6 @@
   font-family: "fontello";
   font-style: normal;
   font-weight: normal;
-  speak: never;
  
   display: inline-block;
   text-decoration: inherit;
@@ -57,5 +56,6 @@
  
 .icon-mail:before { content: '\e800'; } /* '' */
 .icon-phone:before { content: '\e801'; } /* '' */
-.icon-facebook:before { content: '\f09a'; } /* '' */
+.icon-facebook:before { content: '\f09a';
+color: #3b5998; } /* '' */
 .icon-menu:before { content: '\f0c9'; } /* '' */

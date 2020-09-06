@@ -120,6 +120,8 @@
                     max-width: 85%
                 }
                 .--align-left {
+                    margin-left: 5em;
+                    padding-left: 3em;
                     background-color: rgba(237, 237, 237, .25);
                 }
                 .--align-right {
@@ -129,13 +131,22 @@
                 }
                 div {
                     flex-direction: unset;
+                    p {
+                        padding-right: 6em;
+                    }
                     h2 {
                         text-align: unset;
                     }
+                    li span {
+                        min-width: 6.5em;
+                    }
+                    .content__list ul {
+                        margin-left: 4em;
+                    }
                 }
+
             }
-            footer {
-                width: 98%;
+            footer #footer__info {
                 margin: auto;
             }
         

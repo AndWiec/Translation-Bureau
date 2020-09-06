@@ -9,7 +9,6 @@ html {
 
 body {
   font-family: 'Rokkitt', serif;
-  font-weight: 600;
   color: #010d27;
   font-size: 10px;
   overflow-x: hidden;
@@ -41,8 +40,18 @@ nav#top__navigation {
   background-color: transparent;
 }
 
+nav#top__navigation img {
+  height: 3em;
+  padding-left: 1em;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  display: inline-block;
+  line-height: 150%;
+}
+
 nav#top__navigation .top__nav--bg-green {
-  background-color: #21703f;
+  background-color: #1c5f36;
 }
 
 nav#top__navigation .toggle {
@@ -50,7 +59,7 @@ nav#top__navigation .toggle {
 }
 
 nav#top__navigation #nav__menu-button {
-  display: flexbox;
+  display: flex-box;
   text-align: right;
   font-size: 2.3em;
 }
@@ -69,14 +78,10 @@ nav#top__navigation div {
   color: #e7fcf3;
 }
 
-nav#top__navigation h2 {
-  padding-left: 1.5em;
-}
-
 nav#top__navigation ul {
   list-style-type: none;
   text-align: right;
-  padding: .8em .2em .2em 5em;
+  padding: 1em .2em .2em 5em;
 }
 
 nav#top__navigation ul li {
@@ -127,24 +132,54 @@ nav#top__navigation ul li:hover::before {
 
 #content div h2 {
   text-align: center;
-  font-size: 2.5em;
+  font-size: 3.5em;
   text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.3), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
   border-radius: 0.5em;
 }
 
 #content div p {
-  padding: 1em 2em;
+  padding: 1em;
   text-align: justify;
+  font-size: 2.2em;
+}
+
+#content div .content__list ul {
+  padding: 0 1em;
+  text-align: unset;
+}
+
+#content div .content__list ul li {
+  margin: unset;
+  display: block;
+}
+
+#content div ul {
+  list-style: none inside;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+}
+
+#content div ul li {
+  font-size: 2.2em;
+  padding: .2em;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  text-align: center;
+}
+
+#content div ul li span {
+  display: inline-block;
+  min-width: 4.5em;
 }
 
 #content .--align-right,
 #content .--align-left {
   margin-bottom: .5em;
   border-radius: 0.5em;
-}
-
-#content p {
-  font-size: 1.5em;
 }
 
 footer {
@@ -159,12 +194,6 @@ footer hr {
   border-top: 0.1em solid #010d27;
 }
 
-footer iframe {
-  width: 100%;
-  height: 45em;
-  border: none;
-}
-
 footer #footer__info {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -177,18 +206,26 @@ footer #footer__info h4 {
 }
 
 footer #footer__info p {
-  padding: .5em 0;
-  font-size: 1.8em;
+  padding: .5em 1em;
+  font-size: 2.2em;
 }
 
 footer #footer__info .footer__contact span p {
-  font-size: 1.4em;
-  width: 20em;
+  font-size: 2em;
   margin: auto;
 }
 
 footer #footer__info .footer__contact span p a {
   color: #010d27;
+}
+
+footer #footer__author {
+  background-color: #1c5f36;
+}
+
+footer #footer__author p {
+  color: white;
+  text-align: center;
 }
 
 @-webkit-keyframes example {
@@ -198,7 +235,7 @@ footer #footer__info .footer__contact span p a {
   }
   100% {
     right: 0;
-    background-color: #21703f;
+    background-color: #1c5f36;
     border-radius: 0 0 1.5em 1.5em;
   }
 }
@@ -210,7 +247,7 @@ footer #footer__info .footer__contact span p a {
   }
   100% {
     right: 0;
-    background-color: #21703f;
+    background-color: #1c5f36;
     border-radius: 0 0 1.5em 1.5em;
   }
 }
@@ -337,6 +374,8 @@ footer #footer__info .footer__contact span p a {
     max-width: 85%;
   }
   #wrapper #content .--align-left {
+    margin-left: 5em;
+    padding-left: 3em;
     background-color: rgba(237, 237, 237, 0.25);
   }
   #wrapper #content .--align-right {
@@ -350,11 +389,19 @@ footer #footer__info .footer__contact span p a {
         -ms-flex-direction: unset;
             flex-direction: unset;
   }
+  #wrapper #content div p {
+    padding-right: 6em;
+  }
   #wrapper #content div h2 {
     text-align: unset;
   }
-  #wrapper footer {
-    width: 98%;
+  #wrapper #content div li span {
+    min-width: 6.5em;
+  }
+  #wrapper #content div .content__list ul {
+    margin-left: 4em;
+  }
+  #wrapper footer #footer__info {
     margin: auto;
   }
   @-webkit-keyframes example {
