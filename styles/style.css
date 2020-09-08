@@ -35,23 +35,22 @@ nav#top__navigation {
   max-width: 192em;
   top: -.5em;
   z-index: 1;
-  border-bottom-left-radius: 0.5em;
-  border-bottom-right-radius: 0.5em;
+  border-bottom-left-radius: 1em;
+  border-bottom-right-radius: 1em;
   background-color: transparent;
 }
 
+nav#top__navigation div#logo {
+  padding-bottom: 0;
+}
+
 nav#top__navigation img {
-  height: 3em;
+  height: 4.5em;
   padding-left: 1em;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  display: inline-block;
-  line-height: 150%;
 }
 
 nav#top__navigation .top__nav--bg-green {
-  background-color: #1c5f36;
+  background-color: #195530;
 }
 
 nav#top__navigation .toggle {
@@ -62,20 +61,24 @@ nav#top__navigation #nav__menu-button {
   display: flex-box;
   text-align: right;
   font-size: 2.3em;
+  padding-bottom: 0;
+  padding-top: .4em;
 }
 
 nav#top__navigation #nav__menu-button i {
-  padding-right: .5em;
+  color: #e6fdff;
+  display: inline-block;
+  font-size: 1.7em;
+  vertical-align: middle;
 }
 
 nav#top__navigation #nav__menu {
-  -webkit-animation: example 500ms ease-in forwards;
-          animation: example 500ms ease-in forwards;
+  -webkit-animation: slide-in 500ms ease-in forwards;
+          animation: slide-in 500ms ease-in forwards;
 }
 
 nav#top__navigation div {
-  line-height: 150%;
-  color: #e7fcf3;
+  line-height: 200%;
 }
 
 nav#top__navigation ul {
@@ -88,21 +91,21 @@ nav#top__navigation ul li {
   display: block;
   font-size: 1.7em;
   text-transform: uppercase;
-  padding-top: .5em;
-  padding-left: .5em;
+  padding: .5em .7em .5em 0;
   position: relative;
 }
 
 nav#top__navigation ul li a {
-  padding: 0em .25em;
+  padding: 0em;
   letter-spacing: .15em;
+  color: #e6fdff;
 }
 
 nav#top__navigation ul li::before {
   content: '';
   display: flexbox;
   height: .2em;
-  background-color: #e7fcf3;
+  background-color: #e6fdff;
   position: absolute;
   top: 0;
   width: 0%;
@@ -134,7 +137,7 @@ nav#top__navigation ul li:hover::before {
   text-align: center;
   font-size: 3.5em;
   text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.3), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
-  border-radius: 0.5em;
+  border-radius: 1em;
 }
 
 #content div p {
@@ -179,7 +182,7 @@ nav#top__navigation ul li:hover::before {
 #content .--align-right,
 #content .--align-left {
   margin-bottom: .5em;
-  border-radius: 0.5em;
+  border-radius: 1em;
 }
 
 footer {
@@ -220,35 +223,36 @@ footer #footer__info .footer__contact span p a {
 }
 
 footer #footer__author {
-  background-color: #1c5f36;
+  background-color: #195530;
 }
 
 footer #footer__author p {
-  color: white;
+  font-size: 1.5em;
+  color: #e6fdff;
   text-align: center;
 }
 
-@-webkit-keyframes example {
+@-webkit-keyframes slide-in {
   0% {
     right: -100%;
     border-radius: 0 0 .5em 0.5em;
   }
   100% {
     right: 0;
-    background-color: #1c5f36;
-    border-radius: 0 0 1.5em 1.5em;
+    background-color: #195530;
+    border-radius: 0 0 1em 1em;
   }
 }
 
-@keyframes example {
+@keyframes slide-in {
   0% {
     right: -100%;
     border-radius: 0 0 .5em 0.5em;
   }
   100% {
     right: 0;
-    background-color: #1c5f36;
-    border-radius: 0 0 1.5em 1.5em;
+    background-color: #195530;
+    border-radius: 0 0 1em 1em;
   }
 }
 
@@ -360,6 +364,7 @@ footer #footer__author p {
   }
   #wrapper nav#top__navigation ul {
     padding-right: 10em;
+    padding-top: 1.5em;
   }
   #wrapper nav#top__navigation ul li {
     display: inline;
@@ -404,7 +409,7 @@ footer #footer__author p {
   #wrapper footer #footer__info {
     margin: auto;
   }
-  @-webkit-keyframes example {
+  @-webkit-keyframes slide-in {
     0% {
       right: 0px;
     }
@@ -412,7 +417,7 @@ footer #footer__author p {
       right: 0px;
     }
   }
-  @keyframes example {
+  @keyframes slide-in {
     0% {
       right: 0px;
     }

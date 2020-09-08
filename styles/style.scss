@@ -1,5 +1,7 @@
 $penFont: rgb(1, 13, 39);
-$borderRadius: .5em;
+$bgGreen: rgb(25, 85, 48);
+$colorTransette: rgb(230, 253, 255);
+$borderRadius: 1em;
 $grassWhite: rgb(231, 252, 243);
 * {
     margin: 0px;
@@ -39,15 +41,15 @@ nav#top__navigation {
     border-bottom-left-radius: $borderRadius;
     border-bottom-right-radius: $borderRadius;
     background-color: transparent;
+    div#logo {
+        padding-bottom: 0;
+    }
     img {
-        height: 3em;
+        height: 4.5em;
         padding-left: 1em;
-        align-self: center;
-        display: inline-block;
-        line-height: 150%;
     }
     .top__nav--bg-green {
-        background-color: rgb(28, 95, 54);
+        background-color: $bgGreen;
     }
     .toggle {
         display: none;
@@ -56,16 +58,20 @@ nav#top__navigation {
         display: flex-box;
         text-align: right;
         font-size: 2.3em;
+        padding-bottom: 0;
+        padding-top: .4em;
         i {
-            padding-right: .5em;
+            color: $colorTransette;
+            display: inline-block;
+            font-size: 1.7em;
+            vertical-align: middle;
         }
     }
     #nav__menu {
-        animation: example 500ms ease-in forwards;
+        animation: slide-in 500ms ease-in forwards;
     }
     div {
-        line-height: 150%;
-        color: $grassWhite;
+        line-height: 200%;
     }
     ul {
         list-style-type: none;
@@ -75,18 +81,18 @@ nav#top__navigation {
             display: block;
             font-size: 1.7em;
             text-transform: uppercase;
-            padding-top: .5em;
-            padding-left: .5em;
+            padding: .5em .7em .5em 0;
             position: relative;
             a {
-                padding: 0em .25em;
+                padding: 0em;
                 letter-spacing: .15em;
+                color: $colorTransette;
             }
             &::before {
                 content: '';
                 display: flexbox;
                 height: .2em;
-                background-color: $grassWhite;
+                background-color: $colorTransette;
                 position: absolute;
                 top: 0;
                 width: 0%;
@@ -182,23 +188,24 @@ footer {
         }
     }
     #footer__author {
-        background-color: rgb(28, 95, 54);
+        background-color: $bgGreen;
         p {
-            color: white;
+            font-size: 1.5em;
+            color: $colorTransette;
             text-align: center;
         }
     }
 }
 
-@keyframes example {
+@keyframes slide-in {
     0% {
         right: -100%;
         border-radius: 0 0 .5em 0.5em;
     }
     100% {
         right: 0;
-        background-color: rgb(28, 95, 54);
-        border-radius: 0 0 1.5em 1.5em;
+        background-color: $bgGreen;
+        border-radius: 0 0 1em 1em;
     }
 }
 @import "./flexbox";

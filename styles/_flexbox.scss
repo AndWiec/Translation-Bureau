@@ -106,6 +106,7 @@
                 }
                 ul {
                     padding-right: 10em;
+                    padding-top: 1.5em;
                     li {
                         display: inline;
                     }
@@ -150,7 +151,7 @@
                 margin: auto;
             }
         
-        @keyframes example {
+        @keyframes slide-in {
             0% {
                 right: 0px;
             }
